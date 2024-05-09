@@ -1,6 +1,6 @@
 name: Java CI with Gradle
 
-# master 브랜치에 push, PR 이벤트 발생시 동작.
+# main 브랜치에 push, PR 이벤트 발생시 동작.
 on:
   push:
     branches: [ "main" ]
@@ -74,6 +74,7 @@ jobs:
             sudo docker stop github-actions-demo
             sudo docker rm github-actions-demo
             sudo docker run -it -d -p 8080:8080 --name github-actions-demo jiseokchoij/github-actions-demo
+        #중단 배포이기 때문에 read time 이 있다
 
       # (3) CD : Docker 컨테이너 수행 5) Remove Github IP from security group
       - name: Remove IP FROM security group
