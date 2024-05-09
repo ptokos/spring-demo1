@@ -71,7 +71,7 @@ jobs:
           port: ${{ secrets.EC2_SSH_PORT }}
           timeout: 60s
           script: |
-            sudo docker stogip github-actions-demo
+            sudo docker stop github-actions-demo
             sudo docker rm github-actions-demo
             sudo docker run -it -d -p 8080:8080 --name github-actions-demo jiseokchoij/github-actions-demo
 
