@@ -2,20 +2,15 @@ package com.example.demo.controller.user;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
-    @RequestMapping(method = RequestMethod.GET, value = "")
-    public String user(Model model) {
-        return "/user/user";
-    }
+    @GetMapping( "/detail")
+    public User detail( ) {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/datail")
-    public String detail() {
-        return "/user/detail";
+        return new User("peter", 10, "dev");
     }
 }
