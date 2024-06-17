@@ -1,4 +1,4 @@
-package com.example.demo.error;
+package com.example.demo.controller.error;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;

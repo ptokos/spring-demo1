@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>User Page</title>
 </head>
 <body>
+    <h1>User Page</h1>
+    <div> name: <span th:text="${name}"></span></div>
+    <div> age: <span th:text="${age}"></span></div>
+    <div> job: <span th:text="${job}"></span></div>
+
 
 </body>
 </html>
